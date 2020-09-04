@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Assignment</title>
+{% endblock %}
+
+{% block body %}
+
+<form class="form-signin" action="/options" method="POST" enctype="multipart/form-data">
+
+    <img src="{{ url_for('static', filename='images/curio_wide.png') }}" width="100%">
+    <h1>Assignment</h1>
+    <p>Please upload a file to see all the available options by clicking the button below.</p>
+    <input class="form-control form-control-file" type="file" name="inputFile" id="inputFile">
+
+    <input class="btn btn-lg btn-primary" type="submit" value="Upload File">
+</form>
+
+{% endblock %}

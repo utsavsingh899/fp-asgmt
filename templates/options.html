@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Assignment - Options</title>
+{% endblock %}
+
+{% block body %}
+
+<form class="form-signin" action="/options/filter" method="POST">
+    <h3>Filter</h3>
+    <p>Filtering the dataset for PC, LPC & plasmalogen metabolite (presented as different sheets in the same file)</p>
+    <input class="btn btn-lg btn-primary" type="submit" value="Download">
+</form>
+
+<form class="form-signin" action="/options/roundoff" method="POST">
+    <h3>Roundoff</h3>
+    <p>Rounding off the Retention Time and adding a new column "Retention Time Roundoff (in mins)" to the dataset</p>
+
+    <input class="btn btn-lg btn-primary" type="submit" value="Download">
+</form>
+
+<form class="form-signin" action="/options/mean" method="POST">
+    <h3>Mean</h3>
+    <p>Calculting mean of all metabolites which have same "Retention Time Roundoff" across all the samples</p>
+
+    <input class="btn btn-lg btn-primary" type="submit" value="Download">
+</form>
+
+{% endblock %}
